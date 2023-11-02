@@ -414,6 +414,7 @@ exports.createNewOrder = async (req, res) => {
       orderItems: orderDetails.cartItems,
       user: orderDetails.userId, // Assuming you have a user ID in orderDetails
       paymentInfo: {
+        method: paymentData.paymentMethod,
         id: paymentData.paymentId,
         status: paymentData.status,
       },
