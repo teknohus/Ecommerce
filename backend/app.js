@@ -47,7 +47,6 @@ const user = require('./routes/userRoute');
 const product = require('./routes/productRoute');
 const order = require('./routes/orderRoute');
 const payment = require('./routes/paymentRoute');
-const cod = require('./routes/codRoutes');
 
 // app.use('/api/v1', user);
 // app.use('/api/v1', product);
@@ -59,7 +58,6 @@ app.use('/', user);
 app.use('/', product);
 app.use('/', order);
 app.use('/', payment);
-app.use('/', cod);
 
 
 

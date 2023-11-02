@@ -138,6 +138,13 @@ exports.updateProduct = asyncErrorHandler(async (req, res, next) => {
         return next(new ErrorHandler("Product Not Found", 404));
     }
 
+
+    try {
+        
+    
+
+
+
     if (req.body.images !== undefined) {
         let images = [];
         if (typeof req.body.images === "string") {
@@ -197,7 +204,14 @@ exports.updateProduct = asyncErrorHandler(async (req, res, next) => {
         success: true,
         product
     });
+    
+} catch (error) {
+    console.log("Product" , error);
+}
 });
+
+
+
 
 // Delete Product ---ADMIN
 exports.deleteProduct = asyncErrorHandler(async (req, res, next) => {
