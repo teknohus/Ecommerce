@@ -12,7 +12,7 @@ const Actions = ({ id, deleteHandler, name, editRoute }) => {
 
   const handleClose = () => {
     setOpen(false);
-  };
+  }; 
 
   return (
     <>

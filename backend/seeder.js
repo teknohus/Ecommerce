@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv')
 const Product = require('./models/productModel'); // Import your Product model
 
-mongoose.connect('mongodb://chkhizarlhr:1234@ac-kbnbria-shard-00-00.qd1ie7r.mongodb.net:27017,ac-kbnbria-shard-00-01.qd1ie7r.mongodb.net:27017,ac-kbnbria-shard-00-02.qd1ie7r.mongodb.net:27017/?ssl=true&replicaSet=atlas-12ar6i-shard-0&authSource=admin&retryWrites=true&w=majority', {
+
+dotenv.config()
+
+const MONGO_SEEDER = process.env.MONGO_SEEDER;
+// mongoose.connect('mongodb://chkhizarlhr:1234@ac-kbnbria-shard-00-00.qd1ie7r.mongodb.net:27017,ac-kbnbria-shard-00-01.qd1ie7r.mongodb.net:27017,ac-kbnbria-shard-00-02.qd1ie7r.mongodb.net:27017/?ssl=true&replicaSet=atlas-12ar6i-shard-0&authSource=admin&retryWrites=true&w=majority', {
+mongoose.connect(MONGO_SEEDER, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
